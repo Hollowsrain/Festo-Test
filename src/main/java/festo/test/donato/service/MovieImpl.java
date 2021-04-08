@@ -15,11 +15,15 @@ import java.util.List;
 @Service
 public class MovieImpl implements MovieService {
 
-    private final RestTemplate restTemplate = new RestTemplateBuilder().build();
+    private RestTemplate restTemplate;
 
     private final String API_KEY = "dc785020";
 
     private final String DUMMY_URL = "http://localhost:8080/movies/dummy-list";
+
+    public MovieImpl(RestTemplateBuilder builder) {
+        this.restTemplate = builder.build();
+    }
 
 
     @Override
