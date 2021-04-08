@@ -15,7 +15,7 @@ import java.util.List;
 @Service
 public class MovieImpl implements MovieService {
 
-    private RestTemplate restTemplate;
+    private final RestTemplate restTemplate;
 
     private final String API_KEY = "dc785020";
 
